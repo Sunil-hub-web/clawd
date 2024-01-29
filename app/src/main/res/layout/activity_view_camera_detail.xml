@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewCameraDetail">
+
+    <androidx.camera.view.PreviewView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cameraPreview"
+        app:scaleType="fillCenter"/>
+
+    <ImageButton
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40sp"
+        android:id="@+id/capture"
+        android:src="@drawable/round_camera_24"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="#fff" />
+
+    <ImageButton
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10sp"
+        android:src="@drawable/baseline_flash_on_24"
+        app:tint="#fff"
+        android:id="@+id/toggleFlash"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <ImageButton
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_below="@id/toggleFlash"
+        android:layout_marginEnd="10sp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/flipCamera"
+        android:src="@drawable/round_flip_camera_android_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="#fff" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        xmlns:card_view="https://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        app:cardBackgroundColor="#66000000"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"
+        android:layout_above="@id/capture">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/showgooglkemap"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/myMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="100dp"-->
+            <!--                android:layout_height="100dp"-->
+            <!--                android:src="@drawable/googlemapimage"-->
+            <!--                android:scaleType="fitXY"-->
+            <!--                -->
+            <!--                android:layout_margin="5dp">-->
+
+
+            <!--            </ImageView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/showgooglkemap"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/showYourLocation"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:id="@+id/showYourLocationlat"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:id="@+id/showYourLocationlong"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/showYourLocationdatetime"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

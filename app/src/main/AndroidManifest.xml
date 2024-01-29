@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pnpawd.userapp">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CQuestApp"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon">
+        <activity
+            android:name=".ViewCameraDetail"
+            android:exported="false"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name=".addmoreplots.ExistingSubmitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addmoreplots.ExistingTNCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addmoreplots.ExistingPlotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addmoreplots.ExistingLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addmoreplots.FetchFarmerDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reports.polygon_report.PolygonReportMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reports.polygon_report.PolygonReportActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
+
+        <activity
+            android:name=".weather.WeatherForecastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".polygon.Submitted.PolygonMapSubmittedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".polygon.PolygonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".farmeronboarding.FarmerOnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cropintellix.LanguageSelectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reports.pipe_report.PipeReportDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.pipe_report.PipeReportImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.pipe_report.PipeReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.pipe_report.PipeReportMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.aeriation_report.AeriationDetailsStatusActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.aeriation_report.AeriationDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.aeriation_report.AeriationReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.aeriation_report.AeriationReportImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.aeriation_report.AeriationReportMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".awd.AerationImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".awd.AerationMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cropintellix.PrivacyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cropintellix.TNCActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".awd.AerationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.farmer_report.ReuploadPlotDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.farmer_report.ImageReuploadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.farmer_report.OnBoardingDetailsStatusActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farmeronboarding.StateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pipeinstallation.LandInfoPreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".polygon.LandInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".polygon.MapActivity"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pipeinstallation.PipeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.farmer_report.OnBoardingDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.crop_report.CropDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.benefit_report.BenefitDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.benefit_report.BenefitReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.crop_report.CropReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.farmer_report.OnBoardingReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reports.ReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farmerbenefit.FarmerBenefitActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cropdata.CropActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.SignatureActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farmeronboarding.LocationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farmeronboarding.SubmitActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farmeronboarding.PlotActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cropintellix.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cropintellix.SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farmeronboarding.TNCActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pipeinstallation.Submitted.MapSubmittedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pipeinstallation.Submitted.LandInfoSubmittedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pipeinstallation.Submitted.LandInfoSubmittedPreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBdO7xlhV9Ykx2vbupRG_jCCyFjr8n_9CQ" />
+
+        <service
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

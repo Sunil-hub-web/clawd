@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pnpawd.userapp.reports.pipe_report.PipeReportImageActivity">
+
+    <ImageView
+        android:id="@+id/ImageRe_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="44dp"
+        android:layout_weight="1"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/heading_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Reupload Images"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/version_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/tvPlot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/image1"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlot1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+            <ImageView
+                android:id="@+id/image_re_upload_1"
+                android:layout_width="40dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/editext_bg"
+                android:orientation="horizontal"
+                android:src="@drawable/photo_camera"/>
+
+            <ImageView
+                android:id="@+id/pipe_image_cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_cancel"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/re_upload_image_submit"
+        style="@style/yourButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/heading_bg"
+        android:text="@string/submit"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

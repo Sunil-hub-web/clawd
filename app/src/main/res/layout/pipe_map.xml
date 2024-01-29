@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pnpawd.userapp.pipeinstallation.Submitted.MapSubmittedActivity">
+
+    <ImageView
+        android:id="@+id/pipe_map_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:background="@drawable/heading_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/pipe_map_back"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/polygon_mapping"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold">
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/version_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+
+    <fragment
+        android:id="@+id/pipe_googleMapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="5dp">
+    </fragment>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pipe_polygon_area"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/editext_bg"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/pipe_area_acres"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/grey_bg"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_bg"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pipe_accuracy"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="50dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/editext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/pipe_polygon__edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/edit">
+        </ImageView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+        <ImageView
+            android:id="@+id/pipe_polygon_backArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/back_arrow">
+        </ImageView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+        <ImageView
+            android:id="@+id/pipe_polygon_bin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bin">
+        </ImageView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+        <ImageView
+            android:id="@+id/pipe_polygon_SaveLocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/diskette">
+        </ImageView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/typeOfMarkers"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/pipe_googleMapFragment"
+        app:layout_constraintEnd_toStartOf="@+id/menuLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="100dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/editext_bg">
+
+        <TextView
+            android:id="@+id/singleMarker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:text="Single Marker">
+        </TextView>
+
+        <TextView
+            android:id="@+id/multipleMarker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:text="Multiple Marker">
+        </TextView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

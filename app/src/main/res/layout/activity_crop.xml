@@ -1,0 +1,2317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pnpawd.userapp.cropdata.CropActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/kosher">
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/heading_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="@string/crop_screen"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_bold">
+                </TextView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/version_number">
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="2"
+                android:text="@string/search">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/mobile_number_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editext_bg"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/crop_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="#00000000"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="@string/search_here"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/crop_search"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="#F9F8FA"
+                        android:paddingEnd="10dp"
+                        android:src="@drawable/ic_search" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/first_unique_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plot_id"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <Spinner
+                            android:id="@+id/crop_plot_unique_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_unique_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/plot_id"
+                    android:textStyle="bold">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <TextView
+                            android:id="@+id/txt_unique_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_plots"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/heading_bg">
+
+
+                        <TextView
+                            android:id="@+id/crop_sub_plots"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:theme="@style/SpinnerTheme" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/farmer_name"
+                android:fontFamily="@font/poppins_medium">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editext_bg"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/crop_farmer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="#00000000"
+                        android:hint="@string/farmer_name"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/incomplete_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout26"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/aadhar">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <EditText
+                            android:id="@+id/incomplete_aadhar_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:digits="1234567890"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/aadhar_hint"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/mobile">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <EditText
+                            android:id="@+id/incomplete_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:digits="1234567890"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/mobile_hint"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/gender">
+                </TextView>
+
+                <RadioGroup
+                    android:id="@+id/incomplete_radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/incomplete_radioMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingHorizontal="5dp"
+                        android:text="@string/male" />
+
+
+                    <RadioButton
+                        android:id="@+id/incomplete_radioFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingHorizontal="5dp"
+                        android:text="@string/female" />
+
+                    <RadioButton
+                        android:id="@+id/incomplete_radioOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingHorizontal="5dp"
+                        android:text="@string/other" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/incomplete_state_visible_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/incomplete_assam_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/patta_number">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/editext_bg">
+
+                                <EditText
+                                    android:id="@+id/incomplete_patta_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="#00000000"
+                                    android:hint="@string/patta_number_hint"
+                                    android:padding="10dp"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/daag_number">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/editext_bg">
+
+                                <EditText
+                                    android:id="@+id/incomplete_daag_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="#00000000"
+                                    android:hint="@string/daag_number_hint"
+                                    android:maxLength="50"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/incomplete_telangana_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout21"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/survey_number">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/editext_bg">
+
+                                <EditText
+                                    android:id="@+id/incomplete_survey_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="#00000000"
+                                    android:hint="@string/survey_number_hint"
+                                    android:maxLength="50"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/khatha_number">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/editext_bg">
+
+                                <EditText
+                                    android:id="@+id/incomplete_khatha_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="#00000000"
+                                    android:hint="@string/khatha_number_hint"
+                                    android:padding="10dp"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/pattadhar_number">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/editext_bg">
+
+                                <EditText
+                                    android:id="@+id/incomplete_pattadhar_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="#00000000"
+                                    android:hint="@string/pattadhar_number_hint"
+                                    android:maxLength="50"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/incomplete_bengal_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/khatian_number">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/editext_bg">
+
+                                <EditText
+                                    android:id="@+id/incomplete_khatian_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="#00000000"
+                                    android:hint="@string/khatian_number_hint"
+                                    android:padding="10dp"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/plot_area_of_crop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plot_area"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/crop_plot_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="numberDecimal"
+                            android:digits="0123456789."
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/area_hector">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/grey_bg">
+
+                        <TextView
+                            android:id="@+id/auto_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/area_hector"
+                            android:inputType="numberDecimal"
+                            android:fontFamily="@font/poppins_regular"
+                            android:enabled="false"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout700"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/plot_area_awd_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plot Area (AWD)"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/crop_plot_area_awd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="numberDecimal"
+                            android:digits="0123456789."
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Area in Acers AWD">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/grey_bg">
+
+                        <TextView
+                            android:id="@+id/auto_area_awd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/area_hector"
+                            android:inputType="numberDecimal"
+                            android:fontFamily="@font/poppins_regular"
+                            android:enabled="false"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preparation_date"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <TextView
+                            android:id="@+id/preparation_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/select_date"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/date_irrigation"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_irrigation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/select_date"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transplanting_date"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <TextView
+                            android:id="@+id/transplanting_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/select_date"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="@string/crop_season"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_year"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <TextView
+                                android:id="@+id/first_season_last"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:layout_gravity="center"
+                        android:text="@string/current_year"
+                        android:fontFamily="@font/poppins_medium">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <TextView
+                                android:id="@+id/first_season_current"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="@string/crop_variety"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <TextView
+                                android:id="@+id/first_variety_last"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <TextView
+                                android:id="@+id/first_variety_current"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="@string/crop_season"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_year"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <Spinner
+                                android:id="@+id/season_last_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:layout_gravity="center"
+                        android:text="@string/current_year"
+                        android:fontFamily="@font/poppins_medium">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <Spinner
+                                android:id="@+id/current_year_crop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="@string/crop_variety"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <EditText
+                                android:id="@+id/variety_last_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:background="#00000000"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/editext_bg">
+
+                            <EditText
+                                android:id="@+id/variety_current_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:background="#00000000"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fetilizer_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fertilizer_management"
+                android:textSize="20sp"
+                android:textColor="@color/main_green_color"
+                android:fontFamily="@font/poppins_medium">
+            </TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/nitrogen_txt"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="@string/nitrogen"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_year"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/last_year_nitrogen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_gravity="center"
+                    android:text="@string/current_year"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/current_year_nitrogen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/phosphorous_txt"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="@string/phosphorous"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/last_year_phosphorous"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/current_year_phosphorous"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/potassium_txt"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="@string/potassium"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/last_year_potassium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/current_year_potassium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:text="@string/water_management"-->
+<!--                android:textColor="@color/main_green_color"-->
+<!--                android:textSize="20sp">-->
+
+<!--            </TextView>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/last_year"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:fontFamily="@font/poppins_medium">-->
+<!--                </TextView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/editext_bg"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/last_year_water_management"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:layout_marginEnd="15dp"-->
+<!--                            android:background="#00000000"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:textSize="15sp" />-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:padding="5dp"-->
+<!--                            android:src="@drawable/calendar"-->
+<!--                            android:textColor="@color/main_green_color" />-->
+
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="@string/current_year"-->
+<!--                    android:fontFamily="@font/poppins_medium">-->
+<!--                </TextView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/editext_bg"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/current_year_water_management"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:layout_marginEnd="15dp"-->
+<!--                            android:background="#00000000"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:textSize="15sp" />-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:padding="5dp"-->
+<!--                            android:src="@drawable/calendar"-->
+<!--                            android:textColor="@color/main_green_color" />-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--        </LinearLayout>-->
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/yield_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/main_green_color"
+                android:text="@string/yield"
+                android:textSize="20sp">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_year"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_bg"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/last_year_yield"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:inputType="number"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="@string/current_year"-->
+<!--                    android:fontFamily="@font/poppins_medium">-->
+<!--                </TextView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/editext_bg"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/current_year_yield"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:layout_marginEnd="15dp"-->
+<!--                            android:background="#00000000"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:textSize="15sp" />-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/crop_back"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/heading_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/back"
+                android:textColor="#ffffff">
+            </Button>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <Button
+                android:id="@+id/crop_submit"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/heading_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/next"
+                android:textColor="#ffffff">
+            </Button>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <Button
+                android:id="@+id/crop_home"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/event_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/home"
+                android:textColor="#ffffff">
+            </Button>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

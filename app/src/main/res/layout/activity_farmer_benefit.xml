@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pnpawd.userapp.farmerbenefit.FarmerBenefitActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/kosher_climate">
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/heading_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="@string/farmer_benefits"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_bold">
+                </TextView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/version_number">
+        </TextView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/search">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editext_bg"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/benefit_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="#00000000"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="@string/search_here"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/benefit_search"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="#F9F8FA"
+                        android:paddingEnd="10dp"
+                        android:src="@drawable/ic_search" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/plot_id"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <Spinner
+                            android:id="@+id/benefit_plot_unique_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/total_plots"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+
+                        <TextView
+                            android:id="@+id/benefit_total_plots"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/farmer_name">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editext_bg"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/benefit_farmer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="#00000000"
+                        android:hint="@string/farmer_name"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/season"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+                        <Spinner
+                            android:id="@+id/season"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/benefit"
+                    android:fontFamily="@font/poppins_medium">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_bg">
+
+
+                        <Spinner
+                            android:id="@+id/benefit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/second"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="5dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:text="@string/season"-->
+<!--                    android:textStyle="bold">-->
+<!--                </TextView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="42dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@drawable/editext_bg">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/season_text"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:textSize="13sp" />-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:text="@string/benefit"-->
+<!--                    android:textStyle="bold">-->
+<!--                </TextView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="42dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@drawable/editext_bg">-->
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/benefit_text"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:textSize="13sp" />-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <Button
+                android:id="@+id/capture_event"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/event_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/capture_event"
+                android:textColor="#ffffff">
+            </Button>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image_preview"
+                android:textStyle="bold">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </View>
+
+
+                <ImageView
+                    android:id="@+id/benefit_camera_capture1"
+                    android:layout_width="60dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/photo_camera"
+                    android:background="@drawable/editext_bg"
+                    android:orientation="horizontal">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/benefit_cancel_image1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cancel">
+                </ImageView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </View>
+
+                <ImageView
+                    android:id="@+id/benefit_camera_capture2"
+                    android:layout_width="60dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/photo_camera"
+                    android:background="@drawable/editext_bg"
+                    android:orientation="horizontal">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/benefit_cancel_image2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cancel">
+                </ImageView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </View>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/myMap"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:name="com.google.android.gms.maps.SupportMapFragment">
+        </androidx.fragment.app.FragmentContainerView >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <Button
+                android:id="@+id/benefit_submit"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/heading_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/submit"
+                android:textColor="#ffffff">
+            </Button>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <Button
+                android:id="@+id/farmer_benefit_home"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/event_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/home"
+                android:textColor="#ffffff">
+            </Button>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

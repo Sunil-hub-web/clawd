@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".weather.WeatherForecastActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutxxxxxx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Weather Forecast"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textSize="20sp">
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/weather_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:orientation="vertical"
+        android:background="@drawable/card_bg"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayoutxxxxxx">
+
+
+        <ImageView
+            android:id="@+id/weather_img"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/weather"
+            android:padding="5dp">
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/forecast_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="bottom"
+                android:text="°C"
+                android:textColor="@color/black"
+                android:textSize="27sp">
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forecast_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="30sp">
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/humidity">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Humidity"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/forecast_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+                </TextView>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/wind_speed">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Wind Speed"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/forecast_wind_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+                </TextView>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/sunset">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Sunset"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/forecast_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+                </TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weather_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/weather_linearlayout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

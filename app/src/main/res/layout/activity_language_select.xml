@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cropintellix.LanguageSelectActivity">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="350dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="40dp"
+        android:padding="30dp"
+        android:src="@drawable/kosher"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/english_layout"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/english_bg"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingStart="3dp"
+                android:text="@string/a">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingTop="3dp"
+                android:text="@string/english"
+                android:textSize="18sp">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+        <LinearLayout
+            android:id="@+id/telugu_layout"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/telugu_bg"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingStart="3dp"
+                android:text="@string/అ">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingTop="3dp"
+                android:textSize="18sp"
+                android:text="@string/telugu">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/hindi_layout"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/hindi_bg"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingStart="3dp"
+                android:text="@string/अ">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingTop="3dp"
+                android:textSize="18sp"
+                android:text="@string/hindi">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+        <LinearLayout
+            android:id="@+id/marathi_layout"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/marathi_bg"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingStart="3dp"
+                android:text="@string/म">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingTop="3dp"
+                android:textSize="18sp"
+                android:text="@string/marathi">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout2">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/gujrati_layout"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/gujrati_bg"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingStart="3dp"
+                android:text="@string/ગુ">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingTop="3dp"
+                android:textSize="18sp"
+                android:text="@string/gujarat">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+        <LinearLayout
+            android:id="@+id/odia_layout"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/odia_bg"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingStart="3dp"
+                android:text="@string/ଓ">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingTop="3dp"
+                android:textSize="18sp"
+                android:text="@string/odia">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/version_number"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/layout3">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/powered"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

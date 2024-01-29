@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pnpawd.userapp.polygon.LandInfoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/hamburgerMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                >
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/heading_bg"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="Land Info"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp">
+            </ImageView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/version_number">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/weather_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/editext_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout24">
+
+            <fragment
+                android:id="@+id/pipe_land_googleMapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </fragment>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/latitude"
+                        android:fontFamily="@font/poppins_medium" />
+
+                    <TextView
+                        android:id="@+id/pipe_land_latitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/longitude"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/pipe_land_longitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/state"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/pipe_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/district"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/pipe_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/taluka"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/pipe_taluka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/village"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/pipe_village"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Area Units"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/pipe_area_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot_area"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/pipe_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/pipe_land_back"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/heading_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/back"
+                android:textColor="#ffffff">
+            </Button>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </View>
+
+
+            <Button
+                android:id="@+id/pipe_land_next"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/heading_bg"
+                style="@style/yourButtonStyle"
+                android:text="@string/submit"
+                android:textColor="#ffffff">
+            </Button>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

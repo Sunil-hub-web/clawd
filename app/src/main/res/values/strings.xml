@@ -1,0 +1,395 @@
+<resources>
+    <string name="app_name">PNP AWD</string>
+    <string name="version_number">2.1.4   - Live</string>
+    <string name="powered">Developed by CROPINTELLIX PRIVATE LIMITED</string>
+
+    <string name="welcome_text">Welcome to PNP AWD</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="new_here">New here..??</string>
+    <string name="dont_worry">Don\'t worry just signup to \n access this amazing app</string>
+    <string name="sign_in">Sign In</string>
+    <string name="returning">Returning..??</string>
+    <string name="just_login">Just login to resume your\n amazing work</string>
+
+
+    //Language
+    <string name="hindi" translatable="false">हिन्दी</string>
+    <string name="अ" translatable="false">अ</string>
+    <string name="english" translatable="false">English</string>
+    <string name="a" translatable="false">A</string>
+    <string name="telugu" translatable="false">తెలుగు</string>
+    <string name="అ" translatable="false">అ</string>
+    <string name="marathi" translatable="false">मराठी</string>
+    <string name="म" translatable="false">म</string>
+    <string name="gujarat" translatable="false">ગુજરાત</string>
+    <string name="ગુ" translatable="false">ગુ</string>
+    <string name="odia" translatable="false">ଓଡିଆ</string>
+    <string name="ଓ" translatable="false">ଓ</string>
+
+
+    //Dashboard
+    <string name="farmer_onboarding">Farmer Registration</string>
+    <string name="crop_data">Crop Data</string>
+    <string name="pipe_installation">Pipe Installation</string>
+    <string name="capture_aeration_event">       Capture \nAeration Events</string>
+    <string name="farmer_benefits_dashboard">Farmer \nBenefits</string>
+    <string name="farmer_benefits_report">Farmer Benefits</string>
+    <string name="pipe_install_report">Pipe Installation</string>
+    <string name="aeration_report">Capture Aeration Report</string>
+    <string name="polygon">Polygon</string>
+    <string name="reports">Reports</string>
+    <string name="add_more">Add More Plots</string>
+    <string name="module_select">Select Activity</string>
+
+
+    // Sign Up
+    <string name="account_details">Account Details</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="otp">OTP</string>
+    <string name="company_code">Organization Code</string>
+    <string name="already_account">Already have an account..?? SignIn</string>
+
+    // Login
+    <string name="login">Login</string>
+    <string name="forget_password">Forgot Password..??</string>
+    <string name="dont_account">Don\'t have a account..??  Signup</string>
+
+
+    // State Screen
+    <string name="state_screen">State Detail</string>
+
+    // Add More Plots Fetch Farmer Details Screen
+    <string name="fetch_detail">Fetch Detail</string>
+
+    // Farmer Screen
+    <string name="farmer_info">Personal Details</string>
+    <string name="farmer_details">Farmer Details</string>
+    <string name="farmer_name">Farmer Full Name</string>
+    <string name="mobile_access">Mobile Access</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="guardian_name">Guardian Name</string>
+    <string name="own_mobile">Own Mobile</string>
+    <string name="aadhar">Aadhar Number</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="search">Search Mobile Number / Aadhar Number / Farmer Survey ID / Farmer Unique ID</string>
+    <string name="relative_mobile">Mobile Number of relative</string>
+    <string name="relationship">Relationship with Owner</string>
+    <string name="preview_files">Preview Files</string>
+
+
+    <string name="farmer_name_hint">Enter Farmer Full Name</string>
+    <string name="mobile_hint">Enter Mobile Number</string>
+    <string name="enter_number">Enter Number Here</string>
+    <string name="search_here">Search Here</string>
+    <string name="aadhar_hint">Enter Aadhar Number</string>
+    <string name="guadian_name_hint">Enter Guardian Name</string>
+
+
+    //Location Screen
+    <string name="location_screen">Farmer Address</string>
+    <string name="plot_size">Plot Size</string>
+    <string name="plot_size_txt">Plot size in acre</string>
+    <string name="organization">Organization</string>
+    <string name="state">State</string>
+    <string name="district">District</string>
+    <string name="taluka">Block/Mandal</string>
+    <string name="panchayat">Panchayat</string>
+    <string name="village">Village</string>
+    <string name="address">Address</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+
+
+    <string name="plot_id">Farmer Unique ID</string>
+    <string name="total_plot">Number of Plots</string>
+    <string name="plot_number">Plot Number</string>
+    <string name="area_land">Area of Land</string>
+    <string name="submitted_successfully">Data Submitted Successfully.</string>
+    <string name="area_hector">Area in Acres</string>
+
+
+    <string name="plot_number_hint">Enter Plot Number</string>
+    <string name="bigha_number_hint">Enter Area in Bigha</string>
+    <string name="area_hector_hint">Enter Acres</string>
+
+
+    // Plot screen
+    <string name="plot_info">Plot Details</string>
+    <string name="ownership">Land Ownership</string>
+    <string name="area_choosen">Area Choosen for AWD</string>
+    <string name="area_choosen_acres">Area Choosen for AWD (Acres)</string>
+    <string name="plot_area_Ha">Plot area in Acres</string>
+    <string name="affidavit">Sign the Affidavit</string>
+    <string name="survey_number">Survey Number</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="patta_number">Patta Number</string>
+    <string name="daag_number">Daag Number</string>
+    <string name="khatha_number">Katha Number</string>
+    <string name="pattadhar_number">Pattadhar Passbook Number</string>
+    <string name="khatian_number">Khatian no./Plot no.</string>
+    <string name="record_photo">Photo of the land Records</string>
+    <string name="click_here">Click here to take photo</string>
+
+
+    <string name="carbon_sign">Sign the consent form for carbon Credit</string>
+    <string name="farmer_photo">Farmer Photo</string>
+    <string name="aadhar_photo">Aadhar Photo</string>
+    <string name="other_photo">Other Photo</string>
+
+
+    <string name="survey_number_hint">Enter Survey Number</string>
+    <string name="patta_number_hint">Enter Patta Number</string>
+    <string name="daag_number_hint">Enter Daag Number</string>
+    <string name="khatha_number_hint">Enter Katha Number</string>
+    <string name="pattadhar_number_hint">Enter Pattadhar Passbook Number</string>
+    <string name="khatian_number_hint">Enter Khatian no./Plot no.</string>
+
+    // Submit Screen
+    <string name="signature_screen">Signature</string>
+    <string name="surveyor_info">Surveyor Info</string>
+    <string name="survey_date">Date of Survey</string>
+    <string name="survey_time">Time of Survey</string>
+    <string name="surveyor_name">Name of Surveyor</string>
+    <string name="remark">Village Remarks</string>
+    <string name="get_location">Click To Fetch Location</string>
+
+    <string name="remark_hint">Enter Village Remarks</string>
+
+    // Sign Screen
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+
+
+    // Crop info
+    <string name="crop_screen">Crop Details</string>
+    <string name="plot_unique_id">Plot Unique ID</string>
+    <string name="sub_plots">Sub plots</string>
+    <string name="plot_area">Plot Area</string>
+    <string name="date_irrigation">Date of Nursery</string>
+    <string name="select_date">Select Date</string>
+    <string name="transplanting_date">Date of Transplanting</string>
+    <string name="preparation_date">Date of Land Preparation</string>
+    <string name="crop_season">Crop Season</string>
+    <string name="crop_variety">Crop Variety</string>
+    <string name="last_year">Last Year</string>
+    <string name="current_year">Current Year</string>
+
+
+    <string name="fertilizer_management">Fertilizer Management </string>
+    <string name="nitrogen">Nitrogen (Urea)</string>
+    <string name="phosphorous">Phosphorous (DAP)</string>
+    <string name="potassium">Potassium (MOP)</string>
+
+    <string name="water_management">Water Management</string>
+    <string name="yield">Yield</string>
+
+
+    // Farmer Benefit Screen
+    <string name="farmer_benefits">Farmer Benefits</string>
+    <string name="total_plots">Total land area</string>
+    <string name="season">Season</string>
+    <string name="benefit">Benefit</string>
+    <string name="capture_event">Capture Benefit Evidence</string>
+    <string name="image_preview">Image Preview</string>
+
+
+    // Pipe Installation Screen
+    <string name="capture_data">Capture Data</string>
+    <string name="block">Block</string>
+    <string name="khasara_no">Khasara no</string>
+
+
+    // Aeration
+    <string name="aeration_event_number">Aeration Event Number</string>
+    <string name="geofencing_check">Geofencing Check</string>
+    <string name="aeration_event">Capture Aeration Event</string>
+    <string name="pipe_number">Pipe Number</string>
+    <string name="map_screen">Map Screen</string>
+    <string name="image_screen">Image Screen</string>
+
+
+    //Polygon
+    <string name="polygon_mapping">Polygon Mapping</string>
+    <string name="plot_area_acres">Plot Area (Acres)</string>
+
+
+    // Reports
+    <string name="farmer_onboarding_report">Farmer Registration Report</string>
+    <string name="crop_data_report">Crop Data Report</string>
+    <string name="farmer_benefit_report">Farmer Benefit Report</string>
+    <string name="pipe_report">Pipe Installation Report</string>
+    <string name="polygon_report">Polygon Report</string>
+    <string name="report_detail_reason">Reason of rejection</string>
+    <string name="reason">Reason</string>
+
+    <string name="image_rejected">Image Rejected</string>
+    <string name="rejection_reason">Reason:  </string>
+    <string name="image_mismatch">Image Mismatch</string>
+    <string name="image1">Image 1*</string>
+    <string name="image2">Image 2</string>
+
+    // TNC
+    <string name="tnc">Terms &amp; Conditions</string>
+
+    // Privacy Policy
+    <string name="privacy">Privacy Policy</string>
+
+    // Warning
+    <string name="warning">Alert</string>
+    <string name="developer_warning">Developer Option Detected</string>
+    <string name="access_denied_warning">Account not activated... \n Please contact your Admin !!</string>
+
+
+    <string name="name_empty_warning">Name is empty !!</string>
+    <string name="email_empty_warning">Email is empty !!</string>
+    <string name="email_valid_warning">Enter a valid email id !!</string>
+    <string name="mobile_valid_warning">Enter valid mobile number !!</string>
+    <string name="mobile_empty_warning">Mobile Number cannot be empty !!</string>
+    <string name="username_empty_warning">Username cannot be empty !!</string>
+    <string name="password_empty_warning">Password cannot be empty !!</string>
+    <string name="password_length_warning">Password cannot be less\n than 6 characters !!</string>
+    <string name="confirm_empty_warning">Confirm Password cannot be \n empty !!</string>
+    <string name="confirm_length_warning">Confirm Password cannot be \n less than 6 characters !!</string>
+    <string name="password_mismatch_warning">Password &amp; Confirm Password\n should be same!!</string>
+    <string name="company_code_warning">Enter Organization Code!!</string>
+
+
+    <string name="farmer_name_warning">Enter Farmer Full Name</string>
+    <string name="gender_warning">Select Gender</string>
+    <string name="guardian_name_warning">Select Guardian Name</string>
+    <string name="mobile_access_warning">Select mobile access</string>
+    <string name="relationship_warning">Select Relationship with Owner</string>
+    <string name="aadhar_number_warning">Enter Aadhar Number</string>
+    <string name="mobile_number_warning">Enter Mobile Number</string>
+    <string name="enter_otp_warning">Enter OTP</string>
+    <string name="missing_farmer_id_warning">Farmer Unique Id missing</string>
+    <string name="invalid_otp_warning">OTP is Invalid</string>
+    <string name="mobile_length_warning">Enter Valid Mobile Number</string>
+    <string name="number_plot_warning">Select Numbers of Plots</string>
+    <string name="preview_file_warning">Select Preview Files</string>
+    <string name="area_less_warning">Area in Land cannot be less than</string>
+    <string name="area_cannot_warning">Area in Acres is missing</string>
+    <string name="veriying_otp">Verifying OTP.....</string>
+    <string name="valid_otp">Valid OTP</string>
+
+
+    <string name="location_warning">Select the blue button \n to get your current location</string>
+    <string name="address_warning">Enter Address</string>
+    <string name="state_warning">Select State</string>
+    <string name="organization_warning">Select Organization</string>
+    <string name="district_warning">Select District</string>
+    <string name="taluka_warning">Select Taluka</string>
+    <string name="panchayat_warning">Select Panchayat</string>
+    <string name="village_warning">Select Village</string>
+    <string name="farmer_onboarded">Farmer Onboarded successfully</string>
+
+
+    <string name="land_ownership_warning">Select Land Ownership</string>
+    <string name="calculate_warning">Area Chosen for AWD cannot be greater than Area of Land or Zero</string>
+    <string name="area_awd_warning">Enter Area Chosen for AWD</string>
+    <string name="survey_number_warning">Enter Survey Number</string>
+    <string name="preview_image_warning">Add Photo for Land Record</string>
+    <string name="preview_land1_warning">Add Image 1 Of \n Land Records</string>
+    <string name="preview_land2_warning">Add Image 2 Of \n Land Records</string>
+    <string name="owner_name_warning">Enter Owner Name</string>
+    <string name="affidavit_tnc_warning">Accept the terms &amp; \n conditions for affidavit</string>
+    <string name="carbon_tnc_warning">Please accept the terms &amp; \n conditions for carbon credit</string>
+    <string name="carbon_sign_warning">Please add signature for \n carbon credit</string>
+    <string name="owner_sign_warning">Please add signature for \n plot owner</string>
+    <string name="farmer_photo_warning">Please add farmer photo</string>
+    <string name="aadhar_photo_warning">Please add aadhar photo</string>
+    <string name="other_photo_warning">Please add other photo</string>
+    <string name="affinity_sign_warning">Please add signature for \n affinity</string>
+
+
+    <string name="area_in_acres_warning">Area in Acres missing</string>
+    <string name="area_in_acres_awd_warning">Area in Acres AWD missing</string>
+    <string name="nursery_date_warning">Add Date of Nursery</string>
+    <string name="ploughing_date_warning">Add Date of \n Land Preparation</string>
+    <string name="transplanting_date_warning">Add Date of \n Transplanting</string>
+
+    <string name="nitrogen_last_warning">Enter nitrogen (kg/ha) for last year</string>
+    <string name="nitrogen_current_warning">Enter nitrogen (kg/ha) for current year</string>
+    <string name="phosphorous_last_warning">Enter phosphorous (kg/ha) for last year</string>
+    <string name="phosphorous_current_warning">Enter phosphorous (kg/ha) for current year</string>
+    <string name="potassium_last_warning">Enter potassium (kg/ha) for last year</string>
+    <string name="potassium_current_warning">Enter potassium (kg/ha) for current year</string>
+    <string name="water_last_warning">Enter water for last year</string>
+    <string name="water_current_warning">Enter water for current year</string>
+    <string name="yield_last_warning">Enter yield for last year</string>
+    <string name="yield_current_warning">Enter water for current year</string>
+
+
+    <string name="farmer_unique_warning">Select Farmer Unique Id</string>
+    <string name="plot_unique_warning">Select Plot Unique Id</string>
+    <string name="sub_plot_unique_warning">Select Sub Plot</string>
+    <string name="season_warning">Select Season</string>
+    <string name="crop_variety_warning">Select Crop Variety</string>
+    <string name="benefits_warning">Select Benefits</string>
+    <string name="image1_warning">Capture First Image</string>
+    <string name="image2_warning">Capture Second Image</string>
+    <string name="image3_warning">Capture Third Image</string>
+
+
+    <string name="logout_enabled">Do you want to logout ?</string>
+
+
+    <string name="point_overlapping_warning">Point Overlapping</string>
+
+    <string name="aeration_number_warning">Select Aeration Event Number</string>
+    <string name="aeration_pipe_warning">Select Pipe Number</string>
+    <string name="already_submitted">Data Already Submitted</string>
+    <string name="fill_pipe">Fill Pipe Installation First</string>
+
+
+    <string name="valid_details">Enter valid details</string>
+
+
+    <string name="loading">Loading</string>
+    <string name="sending">Sending</string>
+    <string name="otp_sending">Sending OTP</string>
+    <string name="data_send">Wait while we are \n sending the data</string>
+    <string name="data_load">Wait while we are \n loading the data</string>
+    <string name="checking_data">Checking</string>
+    <string name="location">Wait while we are \n getting the current location</string>
+    <string name="checking_credentials">Wait while we \n check your credentials</string>
+    <string name="gps_network_not_enabled">Turn on the device location.</string>
+    <string name="open_location_settings">Open location setting</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="wait">Wait</string>
+
+    <string name="selected_item">Selected item:</string>
+    <string name="acceptTNC">Accept the Terms &amp; Conditions</string>
+    <string name="logout">Logout</string>
+    <string name="ok">OK</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="previous">Prev</string>
+    <string name="resend">RESEND</string>
+    <string name="send">SEND</string>
+    <string name="home">Home</string>
+    <string name="submit">Submit</string>
+    <string name="success">Success</string>
+    <string name="disable">Disable</string>
+    <string name="clcik_disable">Click here to Disable</string>
+    <string name="close_app">Close App</string>
+
+
+    <string name="approved">Approved</string>
+    <string name="rejected">Rejected</string>
+    <string name="pending">Pending</string>
+
+
+    <!--    Existing plots Screen-->
+
+
+</resources>

@@ -1,0 +1,391 @@
+<resources>
+    <string name="app_name">PNP AWS</string>
+    <string name="version_number">2.1.0 - Live</string>
+    <string name="powered">Developed by CROPINTELLIX PRIVATE LIMITED</string>
+
+    <string name="welcome_text">Welcome to PNP..!!</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="new_here">New here..??</string>
+    <string name="dont_worry">Don\'t worry just signup to \n access this amazing app</string>
+    <string name="sign_in">Sign In</string>
+    <string name="returning">Returning..??</string>
+    <string name="just_login">Just login to resume your\n amazing work</string>
+
+
+    //Language
+    <string name="hindi" translatable="false">हिन्दी</string>
+    <string name="अ" translatable="false">अ</string>
+    <string name="english" translatable="false">English</string>
+    <string name="a" translatable="false">A</string>
+    <string name="telugu" translatable="false">తెలుగు</string>
+    <string name="అ" translatable="false">అ</string>
+    <string name="marathi" translatable="false">मराठी</string>
+    <string name="म" translatable="false">म</string>
+    <string name="gujarat" translatable="false">ગુજરાત</string>
+    <string name="ગુ" translatable="false">ગુ</string>
+    <string name="odia" translatable="false">ଓଡିଆ</string>
+    <string name="ଓ" translatable="false">ଓ</string>
+
+
+    //Dashboard
+    <string name="farmer_onboarding">किसान पंजीकरण</string>
+    <string name="crop_data">फसल डेटा</string>
+    <string name="pipe_installation">पाइप स्थापना</string>
+    <string name="capture_aeration_event">वातन घटनाओं का जमाव</string>
+    <string name="farmer_benefits_dashboard">किसान लाभ</string>
+    <string name="farmer_benefits_report">किसान लाभ रिपोर्टों</string>
+    <string name="pipe_install_report">पाइप की स्थापना</string>
+    <string name="aeration_report">वातन रिपोर्ट का जमाव</string>
+    <string name="polygon">बहुभुज</string>
+    <string name="reports">रिपोर्टों</string>
+    <string name="add_more">और प्लॉट जोड़ें</string>
+    <string name="module_select">गतिविधि का चयन करें</string>
+
+
+    // Sign Up
+    <string name="account_details">खाता विवरण</string>
+    <string name="name">नाम</string>
+    <string name="mobile_no">मोबाइल क्रमांक</string>
+    <string name="email">ईमेल</string>
+    <string name="username">उपयोगकर्ता नाम</string>
+    <string name="password">पासवर्ड</string>
+    <string name="confirm_password">पासवर्ड की पुष्टि कीजिये</string>
+    <string name="otp">ओटीपी</string>
+    <string name="company_code">कंपनी कोड</string>
+    <string name="already_account">क्या आपके पास पहले से एक खाता मौजूद है..?? दाखिल करना</string>
+
+    // Login
+    <string name="login">लॉग इन करें</string>
+    <string name="forget_password">पासवर्ड भूल गए..??</string>
+    <string name="dont_account">खाता नहीं है..??  Signup</string>
+
+
+    // State Screen
+    <string name="state_screen">राज्य विवरण</string>
+
+    // Add More Plots Fetch Farmer Details Screen
+    <string name="fetch_detail">विवरण प्राप्त करें</string>
+
+    // Farmer Screen
+    <string name="farmer_info">व्यक्तिगत विवरण</string>
+    <string name="farmer_details">किसान विवरण</string>
+    <string name="farmer_name">किसान का पूरा नाम</string>
+    <string name="mobile_access">मोबाइल का एक्सेस</string>
+    <string name="gender">लिंग</string>
+    <string name="male">पुरुष</string>
+    <string name="female">महिला</string>
+    <string name="other">अन्य</string>
+    <string name="guardian_name">अभिभावक का नाम</string>
+    <string name="own_mobile">खुद का मोबाइल</string>
+    <string name="aadhar">आधार क्रमांक</string>
+    <string name="mobile">मोबाइल नंबर</string>
+    <string name="search">Search Mobile Number / Aadhar Number / Farmer Survey ID / Farmer Unique ID</string>
+    <string name="relative_mobile">रिश्तेदार का मोबाइल नंबर</string>
+    <string name="relationship">मालिक के साथ रिश्ता</string>
+    <string name="preview_files">फ़ाइलों का पूर्वावलोकन करें</string>
+
+
+    <string name="farmer_name_hint">किसान का पूरा नाम दर्ज करें</string>
+    <string name="mobile_hint">मोबाइल नंबर दर्ज करें</string>
+    <string name="enter_number">यहां नंबर दर्ज करें</string>
+    <string name="search_here">यहां तलाश करो</string>
+    <string name="aadhar_hint">आधार क्रमांक दर्ज करें</string>
+    <string name="guadian_name_hint">अभिभावक का नाम दर्ज करें</string>
+
+
+    //Location Screen
+    <string name="location_screen">किसान का पता</string>
+    <string name="plot_size">प्लॉट का आकार</string>
+    <string name="plot_size_txt">प्लॉट का आकार एकड़ में</string>
+    <string name="organization">संगठन</string>
+    <string name="state">राज्य</string>
+    <string name="district">ज़िला</string>
+    <string name="taluka">खंड/मंडल</string>
+<!--    <string name="taluka">तालुका/तहसील</string>-->
+    <string name="panchayat">पंचायत</string>
+    <string name="village">गाँव</string>
+    <string name="address">पता</string>
+    <string name="latitude">अक्षांश</string>
+    <string name="longitude">देशान्तर</string>
+
+
+    <string name="plot_id">किसान का यूनिक आई.डी</string>
+    <string name="total_plot">भूखंडों की संख्या</string>
+    <string name="plot_number">प्लॉट के संख्या</string>
+    <string name="area_land">भूमि का क्षेत्रफल</string>
+    <string name="submitted_successfully">Data Submitted Successfully</string>
+    <string name="area_hector">क्षेत्रफल एकड़ में</string>
+
+
+    <string name="plot_number_hint">प्लॉट क्रमांक दर्ज करें</string>
+    <string name="bigha_number_hint">बीघा में क्षेत्र दर्ज करें</string>
+    <string name="area_hector_hint">एकड़ दर्ज करें</string>
+
+
+    // Plot screen
+    <string name="plot_info">प्लॉट विवरण</string>
+    <string name="ownership">जमीन का मालिक</string>
+    <string name="area_choosen">ए डब्ल्यू डी के लिए क्षेत्र चुनें</string>
+    <string name="area_choosen_acres">ए डब्ल्यू डी के लिए क्षेत्र चुनें (एकड़)</string>
+    <string name="plot_area_Ha">प्लॉट क्षेत्रफल एकड़ में</string>
+    <string name="affidavit">हलफनामे पर हस्ताक्षर करें</string>
+    <string name="survey_number">सर्वेक्षण संख्या</string>
+    <string name="owner_name">मालिक का नाम</string>
+    <string name="patta_number">पट्टा क्रमांक</string>
+    <string name="daag_number">दाग क्रमांक</string>
+    <string name="khatha_number">कथा क्रमांक</string>
+    <string name="pattadhar_number">पट्टधर पासबुक नंबर</string>
+    <string name="khatian_number">खातियान नं./प्लॉट नं.</string>
+    <string name="record_photo">भूमि अभिलेख की फोटो</string>
+    <string name="click_here">फोटो लेने के लिए यहां क्लिक करें</string>
+
+
+    <string name="carbon_sign">कार्बन क्रेडिट के लिए सहमति फॉर्म पर हस्ताक्षर करें</string>
+    <string name="farmer_photo">किसान फोटो</string>
+    <string name="aadhar_photo">आधार फोटो</string>
+    <string name="other_photo">अन्य फोटो</string>
+
+
+    <string name="survey_number_hint">सर्वेक्षण संख्या दर्ज करें</string>
+    <string name="patta_number_hint">पट्टा संख्या दर्ज करें</string>
+    <string name="daag_number_hint">दाग नंबर दर्ज करें</string>
+    <string name="khatha_number_hint">कत्था नंबर दर्ज करें</string>
+    <string name="pattadhar_number_hint">पट्टधर पासबुक नंबर दर्ज करें</string>
+    <string name="khatian_number_hint">खातियान नं./प्लॉट नं. दर्ज करें</string>
+
+    // Submit Screen
+    <string name="signature_screen">हस्ताक्षर</string>
+    <string name="surveyor_info">सर्वेयर की जानकारी</string>
+    <string name="survey_date">सर्वेक्षण की तिथि</string>
+    <string name="survey_time">सर्वेक्षण का समय</string>
+    <string name="surveyor_name">सर्वेयर का नाम</string>
+    <string name="remark">गाँव की टिप्पणी</string>
+    <string name="get_location">स्थान प्राप्त करने के लिए यहाँ क्लिक करें</string>
+
+    <string name="remark_hint">विलेज रिमार्क्स दर्ज करें</string>
+
+    // Sign Screen
+    <string name="save">जाम करें</string>
+    <string name="clear">साफ़</string>
+
+
+    // Crop info
+    <string name="crop_screen">फसल विवरण</string>
+    <string name="plot_unique_id">प्लॉट की यूनिक आईडी</string>
+    <string name="sub_plots">उप भूखंड</string>
+    <string name="plot_area">निश्चित भूभाग का क्षेत्रफल</string>
+    <string name="date_irrigation">पिछले सीजन में सिंचाई की तारीख</string>
+    <string name="select_date">तारीख़ चुनें</string>
+    <string name="crop_variety">फसल की किस्म</string>
+    <string name="transplanting_date">रोपाई की तिथि</string>
+    <string name="preparation_date">भूमि तैयार करने की तिथि</string>
+    <string name="crop_season">फसल का मौसम</string>
+    <string name="last_year">पिछले साल</string>
+    <string name="current_year">चालू साल</string>
+
+
+    <string name="fertilizer_management">उर्वरक प्रबंधन /</string>
+    <string name="nitrogen">नाइट्रोजन (यूरिया)</string>
+    <string name="phosphorous">फॉस्फोरस (डीएपी)</string>
+    <string name="potassium">पोटेशियम (एमओपी)</string>
+
+    <string name="water_management">जल प्रबंधन</string>
+    <string name="yield">उपज </string>
+
+
+    // Farmer Benefit Screen
+    <string name="farmer_benefits">Farmer Benefits</string>
+    <string name="total_plots">Total land area</string>
+    <string name="season">Season</string>
+    <string name="benefit">Benefit</string>
+    <string name="capture_event">Capture Benefit Evidence</string>
+    <string name="image_preview">Image Preview</string>
+
+
+    // Pipe Installation Screen
+    <string name="capture_data">Capture Data</string>
+    <string name="block">Block</string>
+    <string name="khasara_no">Khasara no</string>
+
+
+    // Aeration
+    <string name="aeration_event_number">Aeration Event Number</string>
+    <string name="geofencing_check">Geofencing Check</string>
+    <string name="aeration_event">Capture Aeration Event</string>
+    <string name="pipe_number">Pipe Number</string>
+    <string name="map_screen">Map Screen</string>
+    <string name="image_screen">Image Screen</string>
+
+
+    //Polygon
+    <string name="polygon_mapping">बहुभुज मानचित्रण</string>
+    <string name="plot_area_acres">प्लॉट क्षेत्रफल (एकड़)</string>
+
+
+    // Reports
+    <string name="farmer_onboarding_report">Farmer Registration Report</string>
+    <string name="crop_data_report">Crop Data Report</string>
+    <string name="farmer_benefit_report">Farmer Benefit Report</string>
+    <string name="pipe_report">Pipe Installation Report</string>
+    <string name="polygon_report">Polygon Report</string>
+    <string name="report_detail_reason">Reason of rejection</string>
+    <string name="reason">Reason</string>
+
+
+    <string name="image_rejected">Image Rejected</string>
+    <string name="rejection_reason">Reason:  </string>
+    <string name="image_mismatch">Image Mismatch</string>
+    <string name="image1">Image 1*</string>
+    <string name="image2">Image 2</string>
+
+    // TNC
+    <string name="tnc">Terms &amp; Conditions</string>
+
+    // Privacy Policy
+    <string name="privacy">Privacy Policy</string>
+
+    // Warning
+    <string name="warning">चेतावनी</string>
+    <string name="developer_warning">डेवलपर विकल्प का पता चला</string>
+    <string name="access_denied_warning">खाता सक्रिय नहीं है... \n कृपया अपने एडमिन से संपर्क करें !!</string>
+
+
+    <string name="name_empty_warning">नाम खाली है !!</string>
+    <string name="email_empty_warning">ईमेल खाली है !!</string>
+    <string name="email_valid_warning">एक वैध ईमेल आईडी दर्ज करें !!</string>
+    <string name="mobile_empty_warning">मोबाइल नंबर खाली नहीं हो सकता !!</string>
+    <string name="mobile_valid_warning">वैध मोबाइल नंबर दर्ज करें !!</string>
+    <string name="username_empty_warning">उपयोगकर्ता नाम खाली नहीं हो सकता !!</string>
+    <string name="password_empty_warning">पासवर्ड खाली नहीं हो सकता !!</string>
+    <string name="password_length_warning">पासवर्ड 6 वर्णों से \n कम का नहीं हो सकता !!</string>
+    <string name="confirm_empty_warning">पासवर्ड की पुष्टि करें \n खाली नहीं हो सकता !!</string>
+    <string name="confirm_length_warning">कन्फर्म पासवर्ड \n 6 वर्णों से कम का नहीं हो सकता !!</string>
+    <string name="password_mismatch_warning">पासवर्ड और पासवर्ड की पुष्टि करें \n समान होना चाहिए   !!</string>
+    <string name="company_code_warning">कंपनी कोड दर्ज करें !!</string>
+
+    <string name="farmer_name_warning">किसान का पूरा नाम दर्ज करें</string>
+    <string name="gender_warning">लिंग चुनें</string>
+    <string name="guardian_name_warning">अभिभावक का नाम दर्ज करें</string>
+    <string name="mobile_access_warning">मोबाइल एक्सेस का चयन करें</string>
+    <string name="relationship_warning">मालिक के साथ संबंध चुनें</string>
+    <string name="aadhar_number_warning">आधार क्रमांक दर्ज करें</string>
+    <string name="mobile_number_warning">मोबाइल नंबर दर्ज करें</string>
+    <string name="mobile_length_warning">वैध मोबाइल नंबर दर्ज करें</string>
+    <string name="enter_otp_warning">ओटीपी दर्ज करें</string>
+    <string name="missing_farmer_id_warning">किसान यूनिक आईडी गायब है</string>
+    <string name="invalid_otp_warning">ओटीपी अमान्य है</string>
+    <string name="number_plot_warning">भूखंडों की संख्या का चयन करें</string>
+    <string name="preview_file_warning">पूर्वावलोकन फ़ाइलों का चयन करें</string>
+    <string name="area_less_warning">क्षेत्रफल कम नहीं हो सकता </string>
+    <string name="area_cannot_warning">एकड़ में क्षेत्र गायब है</string>
+    <string name="veriying_otp">ओटीपी सत्यापित किया जा रहा है.....</string>
+    <string name="valid_otp">वैध ओटीपी</string>
+
+
+    <string name="location_warning">नीला बटन चुनें \n अपना वर्तमान स्थान प्राप्त करने के लिए</string>
+    <string name="address_warning">पता डालें</string>
+    <string name="state_warning">राज्य चुनें</string>
+    <string name="organization_warning">संगठन का चयन करें</string>
+    <string name="district_warning">जिला चुनें</string>
+    <string name="taluka_warning">तालुका का चयन करें</string>
+    <string name="panchayat_warning">पंचायत का चयन करें</string>
+    <string name="village_warning">गांव का चयन करें</string>
+    <string name="farmer_onboarded">किसान का सफलतापूर्वक पंजीकरण हो गया</string>
+
+    <string name="land_ownership_warning">भूमि मालिक का चयन करें</string>
+    <string name="calculate_warning">ए डब्ल्यू डी के लिए क्षेत्र का चयन भूमि के क्षेत्र से अधिक नहीं हो सकता</string>
+    <string name="area_awd_warning">ए डब्ल्यू डी के लिए चुना क्षेत्र दर्ज करें</string>
+    <string name="survey_number_warning">सर्वेक्षण संख्या दर्ज करें</string>
+    <string name="preview_image_warning">भूमि रिकॉर्ड के लिए फोटो जोड़ें</string>
+    <string name="preview_land1_warning">भूमि अभिलेखों की प्रतिमा 1 जोड़ें</string>
+    <string name="preview_land2_warning">भूमि अभिलेखों की प्रतिमा 2 जोड़ें</string>
+    <string name="owner_name_warning">मालिक का नाम दर्ज करें</string>
+    <string name="affidavit_tnc_warning">हलफनामे के नियम और \n शर्तें स्वीकार करें</string>
+    <string name="carbon_tnc_warning">कृपया कार्बन क्रेडिट के लिए नियम \n और शर्तें स्वीकार करें</string>
+    <string name="carbon_sign_warning">कृपया कार्बन क्रेडिट के \n लिए हस्ताक्षर जोड़ें</string>
+    <string name="owner_sign_warning">भूमि अभिलेखों की छवि 1 जोड़ें</string>
+    <string name="farmer_photo_warning">कृपया किसान का फोटो लगाएं</string>
+    <string name="aadhar_photo_warning">कृपया आधार का फोटो जोड़ें</string>
+    <string name="other_photo_warning">कृपया अन्य फोटो जोड़ें</string>
+    <string name="affinity_sign_warning">कृपया एफ़िनिटी के \n लिए हस्ताक्षर जोड़ें</string>
+
+
+    <string name="area_in_acres_warning">एकड़ में क्षेत्रफल गायब है</string>
+    <string name="area_in_acres_awd_warning">एकड़ में क्षेत्रफल ए डब्ल्यू डी गायब है</string>
+    <string name="nursery_date_warning">पनर्सरी की तिथि दर्ज करे</string>
+    <string name="ploughing_date_warning">भूमि तैयारी की तिथि दर्ज करे</string>
+    <string name="transplanting_date_warning">रोपाई की तारीख दर्ज करे</string>
+
+
+    <string name="nitrogen_last_warning">पिछले वर्ष के लिए नाइट्रोजन (किलोग्राम/हेक्टेयर) दर्ज करें</string>
+    <string name="nitrogen_current_warning">चालू वर्ष के लिए नाइट्रोजन (किलोग्राम/हेक्टेयर) दर्ज करें</string>
+    <string name="phosphorous_last_warning">पिछले वर्ष के लिए फास्फोरस (किलोग्राम/हेक्टेयर) दर्ज करें</string>
+    <string name="phosphorous_current_warning">चालू वर्ष के लिए फास्फोरस (किलोग्राम/हेक्टेयर) दर्ज करें</string>
+    <string name="potassium_last_warning">पिछले वर्ष के लिए पोटेशियम (किलोग्राम/हेक्टेयर) दर्ज करें</string>
+    <string name="potassium_current_warning">चालू वर्ष के लिए पोटाशियम (किलोग्राम/हेक्टेयर) दर्ज करें</string>
+    <string name="water_last_warning">पिछले वर्ष के लिए पानी दर्ज करें</string>
+    <string name="water_current_warning">चालू वर्ष के लिए पानी दर्ज करें</string>
+    <string name="yield_last_warning">पिछले वर्ष के लिए उपज दर्ज करें</string>
+    <string name="yield_current_warning">चालू वर्ष के लिए पानी दर्ज करें</string>
+
+    <string name="farmer_unique_warning">Select Farmer Unique Id</string>
+    <string name="plot_unique_warning">Select Plot Unique Id</string>
+    <string name="sub_plot_unique_warning">Select Sub Plot</string>
+    <string name="season_warning">Select Season</string>
+    <string name="crop_variety_warning">Select Crop Variety</string>
+    <string name="benefits_warning">Select Benefits</string>
+    <string name="image1_warning">Capture First Image</string>
+    <string name="image2_warning">Capture Second Image</string>
+    <string name="image3_warning">Capture Third Image</string>
+
+    <string name="logout_enabled">Do you want to logout ?</string>
+
+    <string name="point_overlapping_warning">Point Overlapping</string>
+
+    <string name="aeration_number_warning">Select Aeration Event Number</string>
+    <string name="aeration_pipe_warning">Select Pipe Number</string>
+    <string name="already_submitted">Data Already Submitted</string>
+    <string name="fill_pipe">Fill Pipe Installation First</string>
+
+
+    <string name="valid_details">वैध विवरण दर्ज करें</string>
+
+
+
+    <string name="loading">लोड हो रहा है</string>
+    <string name="sending">भेज रहे हैं</string>
+    <string name="otp_sending">ओटीपी भेजा जा रहा है</string>
+    <string name="data_send">जब तक हम डेटा भेज रहे हैं \n तब तक प्रतीक्षा करें</string>
+    <string name="data_load">जब तक हम डेटा लोड कर रहे हैं \n तब तक प्रतीक्षा करें</string>
+    <string name="checking_data">जाँच कर रहे है</string>
+    <string name="location">जब तक हम वर्तमान स्थान प्राप्त कर रहे हैं तब तक प्रतीक्षा करें</string>
+    <string name="checking_credentials">प्रतीक्षा करें जब तक हम आपके क्रेडेंशियल्स की जांच करते हैं</string>
+    <string name="gps_network_not_enabled">डिवाइस स्थान चालू करें</string>
+    <string name="open_location_settings">स्थान सेटिंग खोलें</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="wait">इंतज़ा करें<र></र></string>
+
+    <string name="selected_item">Selected item:</string>
+    <string name="acceptTNC">नियम और शर्तें स्वीकार करें</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="ok">ठीक</string>
+    <string name="next">आगे</string>
+    <string name="back">पीछे</string>
+    <string name="previous">पिछला</string>
+    <string name="resend">पुन: भेजें</string>
+    <string name="send">भेजना</string>
+    <string name="home">घर</string>
+    <string name="submit">जमा करें</string>
+    <string name="success">Success</string>
+    <string name="disable">अक्षम करें</string>
+    <string name="clcik_disable">अक्षम करने के लिए यहां क्लिक करें</string>
+    <string name="close_app">ऐप बंद करें</string>
+
+
+    <string name="approved">अनुमत</string>
+    <string name="rejected">अस्वीकार</string>
+    <string name="pending">लंबित</string>
+
+
+</resources>

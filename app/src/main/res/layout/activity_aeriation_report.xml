@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pnpawd.userapp.reports.aeriation_report.AeriationReportActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/aeriation_report_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/left_arrow">
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/heading_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/aeration_report"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_bold">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+
+        <SearchView
+            android:id="@+id/aeriation_report_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:queryHint="Unique ID"
+            android:background="@drawable/editext_bg">
+        </SearchView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/reports_title_bg"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearSearchLayout">
+
+
+        <TextView
+            android:id="@+id/firstColumn"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:text="Ev No."
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/secondColumn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_bg"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/secondColumn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Unique ID"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/thirdColumn"
+            app:layout_constraintStart_toEndOf="@id/firstColumn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_bg" />
+
+        <TextView
+            android:id="@+id/thirdColumn"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Plot Unique Id"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fourthColumn"
+            app:layout_constraintStart_toEndOf="@id/secondColumn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_bg" />
+
+        <TextView
+            android:id="@+id/fourthColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pipe No."
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/thirdColumn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout32"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/aeriation_report_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <ProgressBar
+            android:id="@+id/aeriation_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout32" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout32">
+
+        <Button
+            android:id="@+id/aeriation_list_back"
+            style="@style/yourButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/heading_bg"
+            android:text="@string/previous"
+            android:textColor="#ffffff">
+        </Button>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+
+        <Button
+            android:id="@+id/aeriation_list_next"
+            style="@style/yourButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/heading_bg"
+            android:text="@string/next"
+            android:textColor="#ffffff">
+        </Button>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

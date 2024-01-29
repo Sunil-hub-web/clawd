@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reports_title_bg"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/aeration_event_number"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/aeriation_ivEdit"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                <ImageView
+                    android:id="@+id/aeriation_ivEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/edit"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#aeb1b8"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/area_hector"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/details_area_hector"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/ownership"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/details_ownership"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#aeb1b8"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/owner_name"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/details_owner_name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/survey_number"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/details_survey_number"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="18sp">-->
+<!--            </TextView>-->
+
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="1"
+                android:text="@string/plot_number">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editext_bg"
+                    android:layout_weight="0.3">
+
+                    <TextView
+                        android:id="@+id/assam_plot_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="#00000000"
+                        android:hint="@string/plot_number_hint"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="1"
+                android:text="@string/area_land">
+            </TextView>
+
+            <LinearLayout
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/editext_bg">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/assam_area_bigha"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/black">
+
+                </View>
+
+
+                <TextView
+                    android:id="@+id/area_unit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:text="Bigha">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="1"
+                android:text="@string/area_hector">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/grey_bg"
+                    android:layout_weight="0.3">
+
+                    <EditText
+                        android:id="@+id/assam_area_hector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:hint="@string/area_hector"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/assam_image_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_close"
+            app:tint="@color/black">
+        </ImageView>
+
+    </LinearLayout>
+
+</LinearLayout>
