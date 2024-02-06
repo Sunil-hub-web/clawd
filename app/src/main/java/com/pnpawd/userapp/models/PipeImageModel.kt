@@ -2,8 +2,8 @@ package com.pnpawd.userapp.models
 
 import android.graphics.Bitmap
 
-class PipeImageModel(image: Bitmap, rotate: Int, index: Int, path: String) {
-    private var image: Bitmap
+class PipeImageModel(image: String, rotate: Int, index: Int, path: String) {
+    private var image: String
     private var rotate: Int
     private var index: Int
     private var path: String
@@ -15,11 +15,11 @@ class PipeImageModel(image: Bitmap, rotate: Int, index: Int, path: String) {
         this.path = path
     }
 
-    fun getImage(): Bitmap {
+    fun getImage(): String {
         return image
     }
 
-    fun setImage(image: Bitmap) {
+    fun setImage(image: String) {
         this.image = image
     }
 

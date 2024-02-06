@@ -15,6 +15,7 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.media.ExifInterface
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
@@ -26,6 +27,7 @@ import android.view.View
 import android.widget.*
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.isVisible
@@ -48,6 +50,7 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.maps.android.PolyUtil
 import com.google.maps.android.SphericalUtil
 import com.pnpawd.userapp.BuildConfig
+import com.pnpawd.userapp.SessionManager
 import com.pnpawd.userapp.ViewCameraDetail
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -135,6 +138,7 @@ class LandInfoPreviewActivity : AppCompatActivity(), LocationListener {
     var khasara: String = ""
     var unit: String = ""
     var block: String = ""
+    lateinit var sessionManager : SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -142,6 +146,8 @@ class LandInfoPreviewActivity : AppCompatActivity(), LocationListener {
         progress = SweetAlertDialog(this@LandInfoPreviewActivity, SweetAlertDialog.PROGRESS_TYPE)
         val sharedPreference =  getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
         token = sharedPreference.getString("token","")!!
+
+        sessionManager = SessionManager(this@LandInfoPreviewActivity)
 
 //        spinnerPipes = findViewById(R.id.rPipes)
         txtPlot_Area = findViewById(R.id.tvPlotArea)
@@ -570,9 +576,7 @@ class LandInfoPreviewActivity : AppCompatActivity(), LocationListener {
     private fun openCamera(position: String) {
 
 
-
         indx = position.toInt() - 1
-        calculation()
 
         val intent = Intent(this@LandInfoPreviewActivity, ViewCameraDetail::class.java)
         intent.putExtra("clickimage", "landinfoimage")
@@ -638,6 +642,7 @@ class LandInfoPreviewActivity : AppCompatActivity(), LocationListener {
         return image
     }
 
+    @RequiresApi(Build.VERSION_CODES.FROYO)
     @SuppressLint("NotifyDataSetChanged")
     private var resultLauncher1 = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
         if (result.resultCode == Activity.RESULT_OK) {
@@ -679,7 +684,7 @@ class LandInfoPreviewActivity : AppCompatActivity(), LocationListener {
                 for (i in model.indices){
                     if (model[i].getIndex() == indx){
                         Log.e("indices", indx.toString())
-                        model[i] = PipeImageModel(edittedImage, rotate, indx, imageModelPath)
+                        //model[i] = PipeImageModel(edittedImage, rotate, indx, imageModelPath)
                         pipe_Image_Adapter.notifyDataSetChanged()
 
                         required = true
@@ -688,7 +693,7 @@ class LandInfoPreviewActivity : AppCompatActivity(), LocationListener {
                 }
 
                 if(!required){
-                    model.add(PipeImageModel(edittedImage, rotate, indx, imageModelPath))
+                    //model.add(PipeImageModel(edittedImage, rotate, indx, imageModelPath))
                     pipe_Image_Adapter = Pipe_Image_Adapter(model)
                     farmer_recyclerView.adapter = pipe_Image_Adapter
                     pipe_Image_Adapter.notifyDataSetChanged()
@@ -855,10 +860,37 @@ class LandInfoPreviewActivity : AppCompatActivity(), LocationListener {
     override fun onStart() {
         super.onStart()
 
-//        if (!sessionManager.getfRAMERiMAGE().equals("DEFAULT")){
-//            image1 = sessionManager.getfRAMERiMAGE().toString()
-//            val imgBitmap = BitmapFactory.decodeFile(sessionManager.getfRAMERiMAGE())
-//            imgCamera1.setImageBitmap(imgBitmap)
-//        }
+        if (!sessionManager.getLANDINFOIMAGE().equals("DEFAULT")){
+
+            calculation()
+
+            imageModelPath = sessionManager.getLANDINFOIMAGE().toString()
+            imageFileName = sessionManager.getLANDINFOIMAGE().toString()
+
+            for (i in model.indices){
+                if (model[i].getIndex() == indx){
+                    Log.e("indices", indx.toString())
+                    model[i] = PipeImageModel(sessionManager.getLANDINFOIMAGE()!!, rotate, indx, imageModelPath)
+                    pipe_Image_Adapter.notifyDataSetChanged()
+
+                    required = true
+                    Log.e("required", required.toString())
+                }
+            }
+
+            if(!required){
+                model.add(PipeImageModel(sessionManager.getLANDINFOIMAGE()!!, rotate, indx, imageModelPath))
+                pipe_Image_Adapter = Pipe_Image_Adapter(model)
+                farmer_recyclerView.adapter = pipe_Image_Adapter
+                pipe_Image_Adapter.notifyDataSetChanged()
+
+                required = false
+                Log.e("required", required.toString())
+            }
+
+            required = false
+
+        }
+
     }
 }

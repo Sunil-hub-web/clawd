@@ -4,6 +4,7 @@ import android.Manifest
 import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.location.Geocoder
 import android.location.Location
@@ -13,6 +14,7 @@ import android.provider.Settings
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -191,28 +193,8 @@ class ViewCameraDetail : AppCompatActivity(), OnMapReadyCallback {
                             Toast.LENGTH_SHORT
                         ).show()
 
-                        if (selectimagedata.equals("framerimage")){
-                            sessionManager.setfRAMERiMAGE(file.path)
-                        }else if (selectimagedata.equals("aadharimage")){
-                            sessionManager.setAADHARIMAGE(file.path)
-                        }else if (selectimagedata.equals("otherimage")){
-                            sessionManager.setOTHERIMAGE(file.path)
-                        }else if (selectimagedata.equals("areationimage1")){
-                            sessionManager.setAERATIONIMAGE1(file.path)
-                            Log.d("userdetailsdataimage",file.path)
-                        }else if (selectimagedata.equals("areationimage2")){
-                            sessionManager.setAERATIONIMAGE2(file.path)
-                        }else if (selectimagedata.equals("ploatimage")){
-                            sessionManager.setPLOATIMAGE(file.path)
-                        }else if (selectimagedata.equals("existingploatimage")){
-                            sessionManager.setEXISTINGPLOATIMAGE(file.path)
-                        }else if (selectimagedata.equals("landinfoimage")){
-                            sessionManager.setLANDINFOIMAGE(file.path)
-                        }else if (selectimagedata.equals("framerbenefit1")){
-                            sessionManager.setFARMERBENEFIT1(file.path)
-                        }else if (selectimagedata.equals("framerbenefit2")){
-                            sessionManager.setFARMERBENEFIT2(file.path)
-                        }
+                        //finish();
+                        //System.exit(1);
 
                         logout_Condition(file)
                     }
@@ -359,6 +341,7 @@ class ViewCameraDetail : AppCompatActivity(), OnMapReadyCallback {
         val showYourLocationlong = dialog.findViewById<TextView>(R.id.showYourLocationlong)
         val showYourLocationdatetime = dialog.findViewById<TextView>(R.id.showYourLocationdatetime)
         val imgBitmap = BitmapFactory.decodeFile(file.absolutePath)
+        val frameLayout = dialog.findViewById<FrameLayout>(R.id.framdata)
         // on below line we are setting bitmap to our image view.
         showdatainimage.setImageBitmap(imgBitmap)
         showYourLocation.text = addressdetails
@@ -366,9 +349,53 @@ class ViewCameraDetail : AppCompatActivity(), OnMapReadyCallback {
         showYourLocationlong.text = longitude.toString()
         showYourLocationdatetime.text = formattedDate
         btn_Yes.setOnClickListener {
-            dialog.dismiss()
             //finish();
             //System.exit(1);
+
+            btn_Yes.setVisibility(View.GONE)
+            finish.setVisibility(View.GONE)
+
+            val b: Bitmap = ScreenshotUtils.getScreenShot(frameLayout)
+
+            if (b != null) {
+                //showScreenShotImage(b);//show bitmap over imageview
+                val saveFile: File = ScreenshotUtils.getMainDirectoryName(this@ViewCameraDetail) //get the path to save screenshot
+                val file: File = ScreenshotUtils.store(b, "screenshot" + ScreenshotType.CUSTOM + ".jpg", saveFile) //save the screenshot to selected path
+
+
+                if (selectimagedata.equals("framerimage")){
+                    sessionManager.setfRAMERiMAGE(file.path)
+                }else if (selectimagedata.equals("aadharimage")){
+                    sessionManager.setAADHARIMAGE(file.path)
+                }else if (selectimagedata.equals("otherimage")){
+                    sessionManager.setOTHERIMAGE(file.path)
+                }else if (selectimagedata.equals("areationimage1")){
+                    sessionManager.setAERATIONIMAGE1(file.path)
+                    Log.d("userdetailsdataimage",file.path)
+                }else if (selectimagedata.equals("areationimage2")){
+                    sessionManager.setAERATIONIMAGE2(file.path)
+                }else if (selectimagedata.equals("ploatimage")){
+                    sessionManager.setPLOATIMAGE(file.path)
+                }else if (selectimagedata.equals("existingploatimage")){
+                    sessionManager.setEXISTINGPLOATIMAGE(file.path)
+                }else if (selectimagedata.equals("landinfoimage")){
+                    sessionManager.setLANDINFOIMAGE(file.path)
+                }else if (selectimagedata.equals("framerbenefit1")){
+                    sessionManager.setFARMERBENEFIT1(file.path)
+                }else if (selectimagedata.equals("framerbenefit2")){
+                    sessionManager.setFARMERBENEFIT2(file.path)
+                }
+
+            } else {
+                //If bitmap is null show toast message
+                Toast.makeText(
+                    this@ViewCameraDetail,
+                    "screenshot_take_failed",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+            dialog.dismiss()
 
             finish()
         }

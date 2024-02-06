@@ -1035,12 +1035,14 @@ class FarmerBenefitActivity : AppCompatActivity(), OnMapReadyCallback {
         if (!sessionManager.getFARMERBENEFIT1().equals("DEFAULT")){
             image1 = sessionManager.getFARMERBENEFIT1().toString()
             val imgBitmap = BitmapFactory.decodeFile(sessionManager.getFARMERBENEFIT1())
+            benefit_image1.scaleType = ImageView.ScaleType.FIT_XY
             benefit_image1.setImageBitmap(imgBitmap)
         }
 
         if (!sessionManager.getFARMERBENEFIT2().equals("DEFAULT")){
             image2 = sessionManager.getFARMERBENEFIT2().toString()
             val imgBitmap = BitmapFactory.decodeFile(sessionManager.getFARMERBENEFIT2())
+            benefit_image2.scaleType = ImageView.ScaleType.FIT_XY
             benefit_image2.setImageBitmap(imgBitmap)
         }
 

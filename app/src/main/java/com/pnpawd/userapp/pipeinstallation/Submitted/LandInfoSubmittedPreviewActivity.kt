@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.location.Location
 import android.location.LocationListener
@@ -44,6 +45,8 @@ import com.google.maps.android.PolyUtil
 import com.google.maps.android.SphericalUtil
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import com.pnpawd.userapp.R
+import com.pnpawd.userapp.SessionManager
+import com.pnpawd.userapp.ViewCameraDetail
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -127,13 +130,15 @@ class LandInfoSubmittedPreviewActivity : AppCompatActivity(), LocationListener {
     private var distanceInMeters = ArrayList<String>()
     private var pipeNoList = ArrayList<String>()
 
+    lateinit var sessionManager: SessionManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_land_info_preview)
         progress = SweetAlertDialog(this@LandInfoSubmittedPreviewActivity, SweetAlertDialog.PROGRESS_TYPE)
         val sharedPreference =  getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
         token = sharedPreference.getString("token","")!!
-
+        sessionManager = SessionManager(this@LandInfoSubmittedPreviewActivity)
 //        spinnerPipes = findViewById(R.id.rPipes)
         txtPlot_Area = findViewById(R.id.tvPlotArea)
 //        txtpipe_req = findViewById(R.id.tvPipes)
@@ -528,26 +533,32 @@ class LandInfoSubmittedPreviewActivity : AppCompatActivity(), LocationListener {
 
     // Code to take image from camera.
     private fun openCamera(position: String) {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        if (intent.resolveActivity(packageManager) != null) {
-            try {
-                photoPath = createImageFile()
-            } catch (ex: IOException) {}
-// Continue only if the File was successfully created
-            if (photoPath != null) {
-                uri = FileProvider.getUriForFile(
-                    this@LandInfoSubmittedPreviewActivity,
-                    BuildConfig.APPLICATION_ID + ".provider", photoPath
-                )
-                indx = position.toInt() - 1
 
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, uri)
-                resultLauncher1.launch(intent)
-                Log.e("Camera_function", "Camera_function")
+        indx = position.toInt() - 1
+        val intent = Intent(this@LandInfoSubmittedPreviewActivity, ViewCameraDetail::class.java)
+        intent.putExtra("clickimage", "landinfoimage")
+        startActivity(intent)
 
-                calculation()
-            }
-        }
+//        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+//        if (intent.resolveActivity(packageManager) != null) {
+//            try {
+//                photoPath = createImageFile()
+//            } catch (ex: IOException) {}
+//// Continue only if the File was successfully created
+//            if (photoPath != null) {
+//                uri = FileProvider.getUriForFile(
+//                    this@LandInfoSubmittedPreviewActivity,
+//                    BuildConfig.APPLICATION_ID + ".provider", photoPath
+//                )
+//
+//
+//                intent.putExtra(MediaStore.EXTRA_OUTPUT, uri)
+//                resultLauncher1.launch(intent)
+//                Log.e("Camera_function", "Camera_function")
+//
+//                calculation()
+//            }
+//        }
     }
 
 // Calculate the distance between two locations.
@@ -636,7 +647,7 @@ class LandInfoSubmittedPreviewActivity : AppCompatActivity(), LocationListener {
                 for (i in model.indices){
                     if (model[i].getIndex() == indx){
                         Log.e("indices", indx.toString())
-                        model[i] = PipeImageModel(edittedImage, rotate, indx, imageModelPath)
+                      //  model[i] = PipeImageModel(edittedImage, rotate, indx, imageModelPath)
                         pipe_Image_Adapter.notifyDataSetChanged()
 
                         required = true
@@ -645,7 +656,7 @@ class LandInfoSubmittedPreviewActivity : AppCompatActivity(), LocationListener {
                 }
 
                 if(!required){
-                    model.add(PipeImageModel(edittedImage, rotate, indx, imageModelPath))
+                  //  model.add(PipeImageModel(edittedImage, rotate, indx, imageModelPath))
                     pipe_Image_Adapter = Pipe_Image_Adapter(model)
                     image_preview_recyclerView.adapter = pipe_Image_Adapter
                     pipe_Image_Adapter.notifyDataSetChanged()
@@ -860,6 +871,41 @@ class LandInfoSubmittedPreviewActivity : AppCompatActivity(), LocationListener {
             }
         }
         return true
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        if (!sessionManager.getLANDINFOIMAGE().equals("DEFAULT")){
+            calculation()
+            imageModelPath = sessionManager.getLANDINFOIMAGE().toString()
+            imageFileName = sessionManager.getLANDINFOIMAGE().toString()
+            for (i in model.indices){
+                if (model[i].getIndex() == indx){
+                    Log.e("indices", indx.toString())
+                    model[i] = sessionManager.getLANDINFOIMAGE()
+                        ?.let { PipeImageModel(it, rotate, indx, it) }!!
+                    pipe_Image_Adapter.notifyDataSetChanged()
+
+                    required = true
+                    Log.e("required", required.toString())
+                }
+            }
+
+            if(!required){
+                sessionManager.getLANDINFOIMAGE()
+                    ?.let { PipeImageModel(it, rotate, indx, it) }?.let { model.add(it) }
+                pipe_Image_Adapter = Pipe_Image_Adapter(model)
+                image_preview_recyclerView.adapter = pipe_Image_Adapter
+                pipe_Image_Adapter.notifyDataSetChanged()
+
+                required = false
+                Log.e("required", required.toString())
+            }
+
+            required = false
+        }
+
     }
 
 }

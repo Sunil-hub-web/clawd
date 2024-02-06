@@ -594,6 +594,7 @@ class AerationImageActivity : AppCompatActivity() {
         if (!sessionManager.getAERATIONIMAGE1().equals("DEFAULT")){
             imageModelPath1 = sessionManager.getAERATIONIMAGE1().toString()
             val imgBitmap = BitmapFactory.decodeFile(sessionManager.getAERATIONIMAGE1())
+            image1.scaleType = ImageView.ScaleType.FIT_XY
             image1.setImageBitmap(imgBitmap)
             Log.d("userdetailsdata123",imageModelPath1)
         }
@@ -601,6 +602,7 @@ class AerationImageActivity : AppCompatActivity() {
         if (!sessionManager.getAERATIONIMAGE2().equals("DEFAULT")){
             imageModelPath2 = sessionManager.getAERATIONIMAGE2().toString()
             val imgBitmap = BitmapFactory.decodeFile(sessionManager.getAERATIONIMAGE2())
+            image2.scaleType = ImageView.ScaleType.FIT_XY
             image2.setImageBitmap(imgBitmap)
             Log.d("userdetailsdata145",imageModelPath1)
         }

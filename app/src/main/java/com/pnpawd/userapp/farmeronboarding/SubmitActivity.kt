@@ -974,18 +974,21 @@ class SubmitActivity : AppCompatActivity() {
         if (!sessionManager.getfRAMERiMAGE().equals("DEFAULT")){
             image1 = sessionManager.getfRAMERiMAGE().toString()
             val imgBitmap = BitmapFactory.decodeFile(sessionManager.getfRAMERiMAGE())
+            imgCamera1.scaleType = ImageView.ScaleType.FIT_XY
             imgCamera1.setImageBitmap(imgBitmap)
         }
 
         if (!sessionManager.getAADHARIMAGE().equals("DEFAULT")){
             image2 = sessionManager.getAADHARIMAGE().toString()
             val imgBitmap = BitmapFactory.decodeFile(sessionManager.getAADHARIMAGE())
+            imgCamera2.scaleType = ImageView.ScaleType.FIT_XY
             imgCamera2.setImageBitmap(imgBitmap)
         }
 
         if (!sessionManager.getOTHERIMAGE().equals("DEFAULT")){
             image3 = sessionManager.getOTHERIMAGE().toString()
             val imgBitmap = BitmapFactory.decodeFile(sessionManager.getOTHERIMAGE())
+            imgCamera3.scaleType = ImageView.ScaleType.FIT_XY
             imgCamera3.setImageBitmap(imgBitmap)
         }
     }

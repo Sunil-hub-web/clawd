@@ -24,6 +24,7 @@ class ImageRecyclerView(private var imageModel: List<LandRecordsModel>) : Recycl
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val model: LandRecordsModel = imageModel[position]
         val imgBitmap = BitmapFactory.decodeFile(model.image)
+        holder.img.scaleType = ImageView.ScaleType.FIT_XY
         holder.img.setImageBitmap(imgBitmap)
         holder.img.rotation = model.rotate.toFloat()
     }

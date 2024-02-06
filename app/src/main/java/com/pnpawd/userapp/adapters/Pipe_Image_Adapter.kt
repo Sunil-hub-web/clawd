@@ -1,5 +1,6 @@
 package com.pnpawd.userapp.adapters
 
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +24,9 @@ internal class Pipe_Image_Adapter(private var pipeImageModel: ArrayList<PipeImag
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val model = pipeImageModel[position]
-        holder.image.setImageBitmap(model.getImage())
+        val imgBitmap = BitmapFactory.decodeFile(model.getImage())
+        holder.image.setImageBitmap(imgBitmap)
+        holder.image.scaleType = ImageView.ScaleType.FIT_XY
         holder.image.rotation = model.getRotate().toFloat()
 
 //        holder.remove.setOnClickListener(View.OnClickListener {
